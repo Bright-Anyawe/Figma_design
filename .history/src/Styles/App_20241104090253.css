@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+:root {
+  --stylish-color: #d760c7;
+  --headerBtn-width: 80px;
+  
+}
+
+.headerContentsContainer {
+  padding: 20px;
+}
+
+.headerContents {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.headerRightContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.headerLeftContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.groupContainer {
+  display: flex;
+  gap: 30px;
+}
+
+.personalContainer {
+  display: flex;
+  gap: 10px;
+  color: var(--stylish-color);
+  font-weight: 700;
+}
+
+.BusinessContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.loginBtn {
+  text-align: center;
+  border: 1px solid;
+  color: var(--stylish-color);
+  background-color: white;
+}
+
+.Language {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

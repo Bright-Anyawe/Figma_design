@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.headerContent {
+
+  padding: 20px;
+}
+
+.headerContents {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+}
+
+.groupContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.personalContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.BusinessContainer {
+  display: flex;
+}

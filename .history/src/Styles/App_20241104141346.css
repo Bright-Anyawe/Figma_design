@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --stylish-color: #d760c7;
+  --gradient-background-color: #d760c799;
+  --gradient-color: #8998f299;
+  --headerBtn-width: 80px;
+  --headerBtn-height: 40px;
+}
+
+.headerContentsContainer,
+.heroScreenContainer,
+.appPresentationContainer {
+  padding: 50px;
+}
+
+.headerContents {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.headerRightContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.headerLeftContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.groupContainer {
+  display: flex;
+  gap: 30px;
+}
+
+.personalContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--stylish-color);
+  font-weight: 700;
+}
+
+.personalContainer img, .BusinessContainer img {
+      width: 14px;
+    height: 14px;
+}
+
+.BusinessContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.loginBtn {
+  text-align: center;
+  border: 1px solid;
+  color: var(--stylish-color);
+  background-color: white;
+  width: var(--headerBtn-width);
+  height: var(--headerBtn-height);
+  font-size: 16px;
+}
+
+.signUpBtn {
+  text-align: center;
+  border: 1px solid;
+  color: #ffffff;
+  background-color: #3dd8d0;
+  width: var(--headerBtn-width);
+  height: var(--headerBtn-height);
+  font-size: 16px;
+}
+
+.Language {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.langTextContainer {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.langText {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.langTextContainer img {
+  width: 14px;
+  height: 14px;
+}
+
+.heroScreen {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.heroScreenTxt {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.heroScreenTxt h3 {
+  font-size: 48px;
+  max-width: 536px;
+  max-height: 375px;
+}
+
+.heroScreen p {
+  font-size: 20px;
+}
+
+.heroImage {
+  height: 574px;
+  width: 532.25px;
+  /* background-color: #3dd8d0; */
+}
+
+.heroScreen button {
+  width: 195px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 12px 16px 12px 16px;
+  text-align: center;
+  background-color: var(--stylish-color);
+}
+
+.carouselImageContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px
+
+}
+
+.circlesContainer {
+  display: flex;
+  algin
+}
+
+.circle {
+  width: 11.85px;
+  height: 11.85px;
+  background-color: black;
+}
+
+.parapBlack {
+  max-width: 217.19px;
+  height: 355.5px;
+
+}
+
+.parap {
+  border-radius: 9.18px;
+  max-width: 90.44px;
+  height: 148.03px;
+}
+
+.appPresentation {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.appPresentationSubTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.appPresentationSubTitle h3 {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  max-width: 560px;
+  max-height: 88px;
+  line-height: 44px;
+}
+
+.subText {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27.32px;
+}
+
+.appPresentationContents {
+  display: flex;
+}
+
+
+
+.accountLeftContents {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.accountLeftContents > * {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+
+.accountTextContainer,
+.sendMoneyTextContainer,
+.earnCashBackTextContainer {
+  max-width: 330px;
+}
+
+.iphoneContainer {
+  width: 246.7px;
+  height: 500px;
+  /* width: 335px;
+  height: 432px; */
+  /* background-color: var(--gradient-background-color); */
+}
+
+.accountRightContents {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.accountRightContents > * {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+

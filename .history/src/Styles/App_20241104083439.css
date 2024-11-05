@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.headerContent {
+
+  padding: 20px;
+}
+
+.headerContents {
+  display: flex;
+  align-items: center;
+}
