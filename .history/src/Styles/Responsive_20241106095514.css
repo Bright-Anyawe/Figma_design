@@ -1,0 +1,276 @@
+
+@media (max-width: 500px){
+
+div.groupContainer {
+  display: none;
+  
+}
+
+section.headerContentsContainer,
+section.heroScreenContainer,
+section.cardPresentationContainer,
+section.appPresentationContainer,
+section.cashBackContainer,
+section.brandsContainer,
+section.downloadContainer,
+footer.footerContainer {
+  padding: 30px;
+}
+
+
+.menu {
+  fill: black;
+  width: 30px;
+}
+
+div.headerRightContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15rem;
+}
+
+div.headerLeftContent {
+     display: none;
+}
+
+div.heroScreen {
+  display: flex;
+  flex-direction: column;
+}
+
+h3.heroTitleText {
+  max-width: 360px;
+  height: 70px;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 35.2px;
+}
+
+div.heroScreenTxt {
+  gap: 40px;
+}
+
+.heroIntroText {
+  max-width: 360px;
+  height: 63px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20.9px;
+  color: var(--text-color);
+}
+
+.heroPara {
+max-width: 360px;
+  height: 42px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20.9px;
+  color: var(--text-color);
+}
+
+.accountBtn {
+  width: Fixed (135.67px);
+  height: Fixed (44px);
+  border-radius: 7.33px;
+}
+
+img.heroImage {
+  /* width: 360px; */
+  /* height: 385.77px; */
+}
+
+div.cardPresentation {
+          display: flex;
+          flex-direction: column-reverse;
+          gap: 30px;
+}
+
+div.cardTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 511px;
+    height: 365px;
+}
+
+h3.cardPresentationTitle {
+   max-width: 360px;
+  height: 78px;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 26.4px;
+  letter-spacing: -3%;
+}
+
+p.cardSecondText {
+    max-width: 360px;
+    height: 63px;
+    line-height: 20.9px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+div.appPresentationContents {
+  display: flex;
+  flex-direction: column;
+}
+
+h3.appPresentationTitle {
+   max-width: 360px;
+  height: 78px;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 26.4px;
+  letter-spacing: -3%;
+}
+
+p.appPresentationPara{
+  /* width: 152px;
+    height: 21.8px; */
+    line-height: 20.9px;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.appTextDesign {
+  font-size: 16px;
+      font-weight: 700;
+}
+
+h3.cashBackTitle {
+     width: 448px;
+  height: 78px;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 26.4px;
+  letter-spacing: -3%;
+  margin: 0;
+}
+
+p.cashBackPara {
+  max-width: 100%;
+    height: 66px;
+    line-height: 21.85px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.cashBackHeadText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.indicatorCircle.one {
+    background-color: #d760c7;
+}
+
+.indicatorCircle.two {
+background-color: #cccccc99;}
+
+div.brands {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.brandTextContainer {
+  width: 390px;
+  height: 431px;
+}
+
+h3.brandsTextTitle {
+    width: 360px;
+    height: 88px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26.4px;
+}
+
+p.brandTextPara {
+width: 100%;
+    height: 69px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22.82px;
+    color: var(--text-color);
+}
+
+div.brandImgContainer{
+  display: block;
+}
+
+div.brandsImages.desktop {
+  display: none;
+}
+
+div.brandsImages {
+    display: flex;
+    flex-direction: column;
+            width: 100%;
+    height: 255px;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+div.brandsFirstImgContainer {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+}
+
+div.brandsSecondImgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 4rem; */
+}
+
+.brandsImages img{
+  width: 100px;
+  height: 100px;
+
+}  
+
+
+.mobileDownloadContainer {
+  height: 656.06px;
+}
+
+div.downloadContents {
+  display: flex;
+  flex-direction: column;
+}
+
+.desktopMockup {
+  display: none;
+}
+
+.mobileMockup {
+  display: block;
+}
+
+.mobileMockup img {
+    width: 264px;
+    height: 329.34px;
+}
+
+div.footerContents {
+  display: flex;
+  flex-direction: column;
+}
+
+div.footerTextContainer {
+   display: flex;
+  flex-direction: column;
+}
+
+
+
+
+}
