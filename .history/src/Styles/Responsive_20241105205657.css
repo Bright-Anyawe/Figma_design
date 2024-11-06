@@ -1,0 +1,29 @@
+
+@media (max-width: 500px){
+
+div.groupContainer {
+  display: none;
+  
+}
+
+div.headerLeftContent {
+     display: none;
+}
+
+div.heroScreen {
+  display: flex;
+  flex-direction: column;
+}
+
+div.cardPresentation {
+  display: flex;
+  flex-direction: column;
+}
+
+div.appPresentationContents {
+  display: flex;
+}
+
+
+
+}

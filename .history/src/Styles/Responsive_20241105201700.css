@@ -1,0 +1,11 @@
+
+@media (max-width: 500px) {
+div.groupContainer {
+  display: flex;
+  gap: 30px;
+  width: 216px;
+}
+
+
+
+}
