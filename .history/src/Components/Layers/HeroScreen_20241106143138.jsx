@@ -43,9 +43,3 @@ export const HeroScreen = ({ heroScreenTxtRef, handleClick }) => {
     </>
   );
 };
-
-
-HeroScreen.propTypes = {
-  heroScreenTxtRef: PropTypes.object,
-  handleClick: PropTypes.func.isRequired
-};

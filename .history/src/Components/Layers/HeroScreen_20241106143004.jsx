@@ -1,6 +1,5 @@
-
-import PropTypes from 'prop-types';  // Import PropTypes
-
+// import { useContext } from "react";
+// import ParentContext from "../../ContextProvider/contextProvider";
 
 export const HeroScreen = ({ heroScreenTxtRef, handleClick }) => {
   //   const { heroScreenTxt } = useContext(ParentContext);
@@ -42,10 +41,4 @@ export const HeroScreen = ({ heroScreenTxtRef, handleClick }) => {
       </section>
     </>
   );
-};
-
-
-HeroScreen.propTypes = {
-  heroScreenTxtRef: PropTypes.object,
-  handleClick: PropTypes.func.isRequired
 };
