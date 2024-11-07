@@ -1,0 +1,540 @@
+
+@media (max-width: 500px){
+
+div.groupContainer {
+  display: none;
+  
+}
+
+section.headerContentsContainer,
+section.heroScreenContainer,
+section.cardPresentationContainer,
+section.appPresentationContainer,
+section.cashBackContainer,
+section.brandsContainer,
+section.downloadContainer,
+footer.footerContainer {
+  padding: 25px;
+}
+
+section.heroScreenContainer {
+  padding: 0;
+}
+
+
+.menu {
+  fill: black;
+  width: 30px;
+}
+
+div.headerContents {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+div.headerRightContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15rem;
+}
+
+div.headerLeftContent {
+     display: none;
+}
+
+div.heroScreen {
+  display: flex;
+  flex-direction: column;
+}
+
+img.heroImage {
+    height: 574px;
+    width: 100%;
+    object-fit: cover;
+    /* background-color: #3dd8d0; */
+}
+
+h3.heroTitleText {
+  max-width: 360px;
+  height: 70px;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 35.2px;
+}
+
+div.heroScreenTxt {
+  gap: 40px;
+          padding: 0px 15px;
+}
+
+.heroIntroText {
+  max-width: 360px;
+  height: 63px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20.9px;
+  color: var(--text-color);
+}
+
+.heroPara {
+max-width: 360px;
+  height: 42px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20.9px;
+  color: var(--text-color);
+}
+
+.accountBtn {
+  width: Fixed (135.67px);
+  height: Fixed (44px);
+  border-radius: 7.33px;
+}
+
+
+
+div.cardPresentation {
+          display: flex;
+          flex-direction: column-reverse;
+          gap: 30px;
+}
+
+div.cardCarousel {
+         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: auto;
+   
+}
+
+
+div.cardCarousel::-webkit-scrollbar {
+  display: none; 
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+div.cardTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 511px;
+    height: 365px;
+}
+
+.parapBlack {
+    max-width: 180.19px;
+    height: 321.5px;
+}
+
+div.carouselImageContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+h3.cardPresentationTitle {
+   max-width: 360px;
+  height: 78px;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 26.4px;
+  letter-spacing: -3%;
+}
+
+p.cardSecondText {
+    max-width: 360px;
+    height: 63px;
+    line-height: 20.9px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+div.cardsContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+      width: 100%; 
+  max-width: 100vw;
+  overflow-x: auto;
+  /* white-space: nowrap; */
+}
+
+.cardsContainer::-webkit-scrollbar {
+  display: none; 
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+div.card {
+ width: 264px;
+ height: 274px;
+}
+
+div.music p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 15.3px;
+    font-size: 11.2px;
+    font-weight: 400;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 192px;
+    height: 30px;
+}
+
+div.streaming p {
+    font-size: 12.32px;
+    font-weight: 400;
+    line-height: 16.83px;
+    text-align: center;
+} 
+
+div.groceries p {
+    width: 240px;
+    height: 38px;
+    font-size: 12.32px;
+    font-weight: 400;
+    line-height: 16.83px;
+    text-align: center;
+}
+
+div.food p {
+    width: 240px;
+    height: 38px;
+    font-size: 12.32px;
+    font-weight: 400;
+    line-height: 19.12px;
+    text-align: center;
+}
+
+div.desktopContents {
+  display: none;
+}
+
+div.mobileContents {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* div.appPresentationContents {
+  display: flex;
+  flex-direction: column;
+} */
+
+h3.appPresentationTitle {
+   max-width: 360px;
+  height: 78px;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 26.4px;
+  letter-spacing: -3%;
+}
+
+p.appPresentationPara{
+  /* width: 152px;
+    height: 21.8px; */
+    line-height: 20.9px;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+div.appInfoSlider {
+  display: flex;
+  gap: 20px;
+      width: 100%; 
+  max-width: 100vw;
+  overflow-x: auto;
+  
+}
+
+div.appInfoSlider::-webkit-scrollbar {
+  display: none; 
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+div.appTextDesign {
+  font-size: 16px;
+      font-weight: 700;
+}
+
+    div.accountLeftContents {
+                display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    div.accountRightContents {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+div.accountLeftContents > * {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+div.accountTextContainer p, div.sendMoneyTextContainer p, div.earnCashBackTextContainer p {
+    width: 330px;
+    height: 91.79px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -2%;
+}
+
+h3.cashBackTitle {
+     width: 100%;
+  height: 78px;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 26.4px;
+  letter-spacing: -3%;
+  margin: 0;
+}
+
+p.cashBackPara {
+  max-width: 100%;
+    height: 66px;
+    line-height: 21.85px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.cashBackHeadText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.indicatorCircle.one {
+    background-color: #d760c7;
+}
+
+.indicatorCircle.two {
+background-color: #cccccc99;}
+
+div.brands {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+div.brandTextContainer {
+  width: 100%;
+  height: 431px;
+}
+
+h3.brandsTextTitle {
+    width: 100%;
+    height: 88px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26.4px;
+    text-align: center;
+}
+
+p.brandTextPara {
+width: 100%;
+    height: 69px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22.82px;
+    color: var(--text-color);
+}
+
+div.brandImgContainer{
+  display: block;
+}
+
+div.brandsImages.desktop {
+  display: none;
+}
+
+div.brandsImages {
+    display: flex;
+    flex-direction: column;
+            width: 100%;
+    height: 255px;
+    /* align-items: center; */
+    justify-content: center;
+            gap: 14px;
+    }
+}
+
+div.brandsFirstImgContainer {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+}
+
+div.brandsSecondImgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 4rem; */
+}
+
+.brandsImages img{
+  width: 100px;
+  height: 100px;
+
+}  
+
+
+.mobileDownloadContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 656.06px;
+          width: 100%;
+}
+
+h4.mobileCashBackTitle {
+  color: var(--stylish-color)
+}
+
+div.downloadContents {
+  display: flex;
+  flex-direction: column;
+}
+
+div.destekListContainer {
+    width: 100%;
+    height: 264px;
+}
+
+.desktopMockup {
+  display: none;
+}
+
+.mobileMockup {
+  display: block;
+          text-align: center;
+}
+
+.mobileMockup img {
+    width: 264px;
+    height: 329.34px;
+}
+
+section.downloadContainer {
+margin: 110px 0;
+        /* padding: 0 0px 0 60px; */
+        height: 1,089px;
+}
+
+h3.downloadTitle {
+    /* width: 510px; */
+    height: 35px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 35.2px;
+            width: 100%;
+}
+
+      p.downloadTextPara {
+        width: 100%;
+        height: 42px;
+        font-weight: 600;
+        font-size: 24px24px;
+    }
+
+
+div.downloadIcons {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 11px;
+}
+
+div.storeIcons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+}
+
+
+    img.qRCodeImg {
+        width: 115px;
+        height: 114px;
+    }
+
+.storeIcons img {
+  width: 210px;
+  height: 50px;
+}
+
+
+section.footerContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 0;
+            height: 1524px;
+}
+
+div.footerContents {
+          display: flex;
+        flex-direction: column;
+        padding: 0 0 0 50px;
+        height: 0;
+        height: 1524px;
+        align-items: baseline;
+
+}
+
+
+div.footerTextContainer {
+   display: flex;
+  flex-direction: column;
+}
+
+div.userContact {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+div.destekListCover {
+    display: flex;
+    align-items: center;
+    gap: 9rem;
+    flex-direction: column;
+}
+
+div.addressContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: start;
+    align-items: baseline;
+}
+
+
+
+
+
+
+
+} 
