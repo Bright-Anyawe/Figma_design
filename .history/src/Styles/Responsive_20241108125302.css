@@ -243,22 +243,22 @@ h3.appPresentationTitle {
 
 .leftVector {
       position: absolute;
-transform: translateY(4%) rotate(365deg);
-        /* top: 50px; */
-        left: 200px;
-        width: 249px;
-        height: 599px;
+    transform: translateY(2%) rotate(359deg);
+    /* top: 50px; */
+    left: 219px;
+    width: 262px;
+    height: 550px;
 }
 
 
 
 .rightVector {
     position: relative;
-           transform: translateY(3%) rotate(536deg);
-        left: -94px;
-        width: 275px;
-        height: 600px;
-    }
+    transform: rotate(-164deg);
+    /* top: 50px; */
+    /* left: 1px; */
+    left: -45px;
+
 
 
 p.appPresentationPara{

@@ -245,7 +245,7 @@ h3.appPresentationTitle {
       position: absolute;
 transform: translateY(4%) rotate(365deg);
         /* top: 50px; */
-        left: 200px;
+        left: 19px;
         width: 249px;
         height: 599px;
 }
@@ -256,7 +256,7 @@ transform: translateY(4%) rotate(365deg);
     position: relative;
            transform: translateY(3%) rotate(536deg);
         left: -94px;
-        width: 275px;
+        width: 300px;
         height: 600px;
     }
 

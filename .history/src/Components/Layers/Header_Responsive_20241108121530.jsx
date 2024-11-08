@@ -99,7 +99,10 @@ export const Header = ({
             <div className="groupContainer">
               <div className="personalContainer">
                 <p>Personal</p>
-                <img src="/arrow-circle-down-stylish.png" alt="downArrow" />
+                <img
+                  src="/arrow-circle-down-stylish.png"
+                  alt="downArrow"
+                />
                 {/* <p>svg</p> */}
               </div>
               <div
@@ -107,11 +110,8 @@ export const Header = ({
                 style={{ color: isBlack ? "white" : "black" }}
               >
                 <p ref={businessRef}>Business</p>
-                {isBlack ? (
-                  <img src="/arrow-circle-down.png" alt="downArrow" />
-                ) : (
-                  <img src="/gray-arrow-down.png" alt="downArrow" />
-                )}
+                
+                <img src="/arrow-circle-down.png" alt="downArrow" />
               </div>
             </div>
           </div>
@@ -163,11 +163,7 @@ export const Header = ({
                 >
                   English
                 </p>
-                {isBlack ? (
-                  <img src="/arrow-circle-down.png" alt="downArrow" />
-                ) : (
-                  <img src="/gray-arrow-down.png" alt="downArrow" />
-                )}
+                <img src="/arrow-circle-down.png" alt="down Arrow" />
               </div>
             </div>
             <div></div>

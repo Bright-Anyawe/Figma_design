@@ -70,7 +70,10 @@ export const AppPresentation = ({
                     </p>
                   </div>
 
-                  <img src="/Send money circle.png" alt="Send money circle" />
+                  <img
+                    src="/Send money circle.png"
+                    alt="Send money circle"
+                  />
                 </div>
                 <div className="earnCashBackFill">
                   <div className="earnCashBackTextContainer">
@@ -151,7 +154,10 @@ export const AppPresentation = ({
                   </p>
                 </div>
 
-                <img src="/Send money circle.png" alt="Send money circle" />
+                <img
+                  src="/Send money circle.png"
+                  alt="Send money circle"
+                />
               </div>
               <div className="earnCashBackFill">
                 <div className="earnCashBackTextContainer">
@@ -166,13 +172,21 @@ export const AppPresentation = ({
               </div>
             </div>
             <div className="iphoneContainer">
-              <img className="desktopLeftVector" src="/Vector 1.png" alt="" />
+              <img
+                className="desktopLeftVector"
+                src="/Vector 1.png"
+                alt=""
+              />
               <img
                 className="iphoneImg"
                 src="/iPhone 14 Pro Space Black Mockup (2).png"
                 alt="iPhone 14 Pro Space Black Mockup"
               />
-              <img className="desktopRightVector" src="/Vector 1.png" alt="" />
+              <img
+                className="desktopRightVector"
+                src="/Vector 1.png"
+                alt=""
+              />
             </div>
 
             <div className="accountRightContents">
@@ -196,8 +210,6 @@ export const AppPresentation = ({
                 </div>
               </div>
               <div className="qRCode">
-                <img src="/QR circle.png" alt="qRCodeImage" />
-
                 <div className="qRCodeTextContainer">
                   <h4>Pay & Receive Payments with QR</h4>
                   <p>

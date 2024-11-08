@@ -313,7 +313,6 @@ div.mobileContents {
   padding: 12px 16px 12px 16px;
   text-align: center;
   background-color: var(--stylish-color);
-  border: none;
 }
 .mobileContents {
   display: none;
@@ -390,13 +389,6 @@ div.mobileContents {
   height: 76px;
 }
 
-.cashBackHeadText {
-  display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .accountTextContainer h4,
 .sendMoneyTextContainer h4,
 .earnCashBackTextContainer h4 {
@@ -434,6 +426,23 @@ div.mobileContents {
   z-index: 999;
 }
 
+.leftVector {
+position: absolute;
+    transform: translateY(5%) rotate(36deg);
+    /* top: 50px; */
+    left: 61px;
+        width: 100%;
+
+}
+
+.rightVector {
+    position: relative;
+    transform: rotate(-164deg);
+    /* top: 50px; */
+    /* left: 1px; */
+    left: -45px;
+
+}
 
 .desktopLeftVector {
     position: relative;

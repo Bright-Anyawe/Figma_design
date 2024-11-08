@@ -37,7 +37,13 @@ export const AppPresentation = ({
             style={{ color: isBlack ? "white" : "black" }}
           >
             <div className="iphoneContainer">
-              <img className="leftVector" src="/Vector 1.png" alt="" />
+              <div
+                className="leftVector"
+                style={{ backgroundImage: `url("Vector 1.png") ` }}
+              >
+                {" "}
+                <img className="leftVector" src="/" alt="" />
+              </div>{" "}
               <img
                 className="iphoneImg"
                 src="/iPhone 14 Pro Space Black Mockup (2).png"
@@ -196,8 +202,6 @@ export const AppPresentation = ({
                 </div>
               </div>
               <div className="qRCode">
-                <img src="/QR circle.png" alt="qRCodeImage" />
-
                 <div className="qRCodeTextContainer">
                   <h4>Pay & Receive Payments with QR</h4>
                   <p>
