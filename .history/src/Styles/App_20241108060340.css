@@ -1,0 +1,55 @@
+.bodyRef {
+  background-color: black;
+}
+
+.businessRefColor {
+  color: white;
+}
+
+.heroScreenTxtRefColor {
+  color: white;
+}
+
+.cardText {
+  color: white;
+}
+
+.langTextColor {
+  color: white;
+}
+
+div.appPresentationTextColor {
+  color: white;
+}
+
+.appPresentationHeaderText {
+  color: white;
+}
+
+.cashBackHeadTitle {
+  color: white;
+}
+
+.cardsColor {
+  color: white;
+}
+
+.brandsTextTitleColor {
+  color: white;
+}
+
+.logoRef {
+  color: white;
+}
+
+.downloadTitleColor {
+  color: white;
+}
+
+.menuRef .menu path{
+  fill: white !important;
+}
+
+div.appInfoSliderColor {
+  color: white;
+}
