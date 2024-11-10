@@ -200,6 +200,12 @@ div.mobileContents {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
 }
 
 .circlesContainer {
@@ -231,6 +237,8 @@ div.mobileContents {
     width: 218px;
     height: 385px;
     
+  transform: translate(-50%, -50%);
+
 }
 
 .parapContainer {

@@ -1,11 +1,6 @@
-.arrow.left {
+.left {
   position: relative;
   right: 82px;
-}
-
-.arrow.right {
-  position: relative;
-  left: 82px;
 }
 .arrow {
   width: 30px;

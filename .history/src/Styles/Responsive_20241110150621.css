@@ -112,6 +112,8 @@ div.cardPresentation {
           
 }
 
+
+
 div.cardCarousel {
          display: flex;
         flex-direction: column;
@@ -120,8 +122,8 @@ div.cardCarousel {
         width: 100%;
         max-width: 100vw;
         overflow-x: auto;
-height: 390px;
- transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+                height: 390px;
+                  transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
   width: max-content;
    
 }
@@ -132,6 +134,23 @@ div.cardCarousel::-webkit-scrollbar {
   -ms-overflow-style: none; 
   scrollbar-width: none; 
 }
+
+div.pictureFrame {
+      z-index: 9999;
+    /* position: relative;
+    left: -226px; */
+    width: 218px;
+    height: 385px;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
 
 div.cardTextContainer {
     display: flex;
@@ -150,6 +169,8 @@ div.carouselImageContainer {
     display: flex;
     align-items: center;
     gap: 5px;
+      position: relative;
+
 }
 
 h3.cardPresentationTitle {
@@ -398,6 +419,30 @@ p.cashBackPara {
   flex-direction: column;
   justify-content: center;
 }
+
+
+div.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+p
+.circle {
+  border-radius: 50%;
+  width: 11.85px;
+  height: 11.85px;
+  background-color: black;
+    cursor: pointer;
+  transition: width 0.3s, height 0.3s;
+}
+
 
 .indicatorCircle.one {
     background-color: #d760c7;

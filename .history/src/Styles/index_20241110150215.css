@@ -230,7 +230,6 @@ div.mobileContents {
     left: -226px; */
     width: 218px;
     height: 385px;
-    
 }
 
 .parapContainer {
@@ -455,7 +454,7 @@ div.mobileContents {
 .desktopRightVector {
       position: absolute;
     transform: translateY(-05%) rotate(197deg);
-    left: -113px;
+    left: 397px;
 }
 
 

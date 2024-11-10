@@ -3,9 +3,9 @@
   right: 82px;
 }
 
-.arrow.right {
+.arrow.left {
   position: relative;
-  left: 82px;
+  right: 82px;
 }
 .arrow {
   width: 30px;

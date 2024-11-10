@@ -87,8 +87,8 @@ export const CardPresentation = ({ cardText, handleClick }) => {
                         } `}
                         style={{
                           backgroundColor: image.color,
-                          width: index === currentIndex ? "25px" : "10px",
-                          height: index === currentIndex ? "25px" : "10px",
+                          width: index === currentIndex ? "20px" : "10px",
+                          height: index === currentIndex ? "16px" : "10px",
                         }}
                       ></p>
                     ))}

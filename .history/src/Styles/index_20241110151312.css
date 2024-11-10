@@ -230,7 +230,6 @@ div.mobileContents {
     left: -226px; */
     width: 218px;
     height: 385px;
-    
 }
 
 .parapContainer {
@@ -444,6 +443,24 @@ div.mobileContents {
  
 }
 
+.iphoneContainer::before {
+
+   content: '';
+  position: absolute; /* Positioning the pseudo-element */
+  top: 0; /* Align with the top */
+  left: 0; /* Align with the left */
+  right: 0; /* Stretch to the right */
+  bottom: 0; /* Stretch to the bottom */
+  background-size: cover; /* Ensure the image covers the element */
+  background-position: center; /* Center the image */
+  transform: rotate(45deg); /* Rotate the background image */
+  content: '';
+  position: absolute;
+ background-image: url("/Vector 1.png");
+ background-position: center;
+ background-size: cover;
+}
+
 
 
 .desktopLeftVector {
@@ -455,7 +472,7 @@ div.mobileContents {
 .desktopRightVector {
       position: absolute;
     transform: translateY(-05%) rotate(197deg);
-    left: -113px;
+    left: 397px;
 }
 
 

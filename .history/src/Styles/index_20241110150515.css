@@ -221,6 +221,7 @@ div.mobileContents {
   width: 11.85px;
   height: 11.85px;
   background-color: black;
+  
 }
 
 
@@ -231,6 +232,8 @@ div.mobileContents {
     width: 218px;
     height: 385px;
     
+  transform: translate(-50%, -50%);
+
 }
 
 .parapContainer {

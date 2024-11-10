@@ -221,6 +221,8 @@ div.mobileContents {
   width: 11.85px;
   height: 11.85px;
   background-color: black;
+    cursor: pointer;
+  transition: width 0.3s, height 0.3s;
 }
 
 
@@ -231,6 +233,8 @@ div.mobileContents {
     width: 218px;
     height: 385px;
     
+  transform: translate(-50%, -50%);
+
 }
 
 .parapContainer {
