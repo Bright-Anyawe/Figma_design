@@ -104,7 +104,7 @@ export const CardPresentation = ({ cardText, handleClick }) => {
                   </div>
                   {isBlack ? (
                     <img
-                      className="arrow rightOnBlack"
+                      className="arrow right"
                       src="/white-right-arrow.png"
                       alt="arrow_right"
                       onClick={nextImage}

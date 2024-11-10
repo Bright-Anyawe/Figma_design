@@ -86,6 +86,13 @@ export const CardPresentation = ({ cardText, handleClick }) => {
                     />
                   )}
 
+                  <img
+                    className="arrow left"
+                    src="/arrow-left.png"
+                    alt="arrow_left"
+                    onClick={previousImage}
+                  />
+
                   <div className="circlesContainer">
                     {images.map((image, index) => (
                       <p
@@ -104,15 +111,15 @@ export const CardPresentation = ({ cardText, handleClick }) => {
                   </div>
                   {isBlack ? (
                     <img
-                      className="arrow rightOnBlack"
-                      src="/white-right-arrow.png"
+                      className="arrow right"
+                      src="/linear.png"
                       alt="arrow_right"
                       onClick={nextImage}
                     />
                   ) : (
                     <img
                       className="arrow right"
-                      src="/linear.png"
+                      src="/white-arrow-right.png"
                       alt="arrow_right"
                       onClick={nextImage}
                     />

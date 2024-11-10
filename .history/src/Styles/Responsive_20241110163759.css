@@ -201,8 +201,6 @@ img.arrow.rightOnBlack {
   left: 82px;
   width: 10px;
   height: 20px;
-  display: none;
-
 }
 
 .cardsContainer::-webkit-scrollbar {

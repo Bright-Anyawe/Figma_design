@@ -8,11 +8,8 @@
   left: 82px;
 }
 
-.arrow.rightOnBlack {
-    position: relative;
-  left: 82px;
-  width: 10px;
-  height: 20px;
+.rightOnBlack {
+  
 }
 .arrow {
   width: 30px;

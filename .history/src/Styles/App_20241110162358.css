@@ -8,11 +8,9 @@
   left: 82px;
 }
 
-.arrow.rightOnBlack {
+.rightOnBlack {
     position: relative;
   left: 82px;
-  width: 10px;
-  height: 20px;
 }
 .arrow {
   width: 30px;

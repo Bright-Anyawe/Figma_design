@@ -183,28 +183,6 @@ div.cardsContainer {
 
 
 
-img.arrow.left {
-  position: relative;
-  right: 82px;
-  display: none;
-}
-
-img.arrow.right {
-  position: relative;
-  left: 82px;
-  display: none;
-
-}
-
-img.arrow.rightOnBlack {
-    position: relative;
-  left: 82px;
-  width: 10px;
-  height: 20px;
-  display: none;
-
-}
-
 .cardsContainer::-webkit-scrollbar {
   display: none; 
   -ms-overflow-style: none; 

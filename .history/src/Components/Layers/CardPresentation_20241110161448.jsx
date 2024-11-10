@@ -70,21 +70,12 @@ export const CardPresentation = ({ cardText, handleClick }) => {
                 />
 
                 <div className="indicator">
-                  {isBlack ? (
-                    <img
-                      className="arrow left"
-                      src="/white-arrow-left.png"
-                      alt="arrow_left"
-                      onClick={previousImage}
-                    />
-                  ) : (
-                    <img
-                      className="arrow left"
-                      src="/arrow-left.png"
-                      alt="arrow_left"
-                      onClick={previousImage}
-                    />
-                  )}
+                  <img
+                    className="arrow left"
+                    src="/arrow-left.png"
+                    alt="arrow_left"
+                    onClick={previousImage}
+                  />
 
                   <div className="circlesContainer">
                     {images.map((image, index) => (
@@ -102,21 +93,19 @@ export const CardPresentation = ({ cardText, handleClick }) => {
                       ></p>
                     ))}
                   </div>
-                  {isBlack ? (
-                    <img
-                      className="arrow rightOnBlack"
-                      src="/white-right-arrow.png"
-                      alt="arrow_right"
-                      onClick={nextImage}
-                    />
-                  ) : (
-                    <img
-                      className="arrow right"
-                      src="/linear.png"
-                      alt="arrow_right"
-                      onClick={nextImage}
-                    />
-                  )}
+{isBlack? 
+<img
+                    className="arrow right"
+                    src="/linear.png"
+                    alt="arrow_right"
+                    onClick={nextImage}
+                  />}
+                  <img
+                    className="arrow right"
+                    src="/linear.png"
+                    alt="arrow_right"
+                    onClick={nextImage}
+                  />
                 </div>
               </div>
 
