@@ -15,7 +15,7 @@ describe("Card presentation component", () => {
     );
 
     const cardButton = screen.getByRole("button", {
-      name: /Learn more/i,
+      name: /name: /Learn more/i,/i,
     });
     expect(cardButton).toBeInTheDocument();
   });

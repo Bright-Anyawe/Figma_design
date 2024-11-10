@@ -15,7 +15,7 @@ describe("Card presentation component", () => {
     );
 
     const cardButton = screen.getByRole("button", {
-      name: /Learn more/i,
+      name: /Open an account/i,
     });
     expect(cardButton).toBeInTheDocument();
   });
@@ -24,12 +24,12 @@ describe("Card presentation component", () => {
     const handleClick = vi.fn();
     render(
       <ProvideContext.Provider value={{ isBlack: false, setIsBlack: vi.fn() }}>
-        <CardPresentation cardText="Test Card" handleClick={handleClick} />
+        <CardPresentation cardText="Test Card" handleClick={HANDLE} />
       </ProvideContext.Provider>
     );
 
     const cardButton = screen.getByRole("button", {
-      name: /Learn more/i,
+      name: / No more card fees!/i,
     });
 
     fireEvent.click(cardButton);
