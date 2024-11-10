@@ -1,0 +1,35 @@
+.carouselImageContainer {
+  display: flex;
+  align-items: center;        /* Centers items vertically */
+  justify-content: center;     /* Centers items horizontally */
+  gap: 20px;                   /* Space between each image */
+  position: relative;          /* Allows for absolute positioning if needed */
+  padding: 20px;               /* Adds some padding for aesthetics */
+}
+
+.carouselImageContainer img.parap {
+  width: 100px;                /* Set a fixed size for inactive images */
+  height: auto;
+  opacity: 0.6;                /* Make inactive images slightly transparent */
+  transition: opacity 0.3s ease;
+}
+
+.carouselImageContainer img.parap:hover {
+  opacity: 1;                  /* Make inactive images fully visible on hover */
+}
+
+.pictureFrame {
+  border: 2px solid #000;      /* Optional border to highlight the frame */
+  padding: 10px;               /* Padding around the active image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;                /* Size of the picture frame */
+  height: 200px;               /* Size of the picture frame */
+  background-color: #f0f0f0;   /* Background color for the picture frame */
+}
+
+.pictureFrame img {
+  width: 100%;                 /* Fill the picture frame */
+  height: auto;
+}

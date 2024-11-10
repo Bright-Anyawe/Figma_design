@@ -1,0 +1,88 @@
+.cardPresentationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 400px;
+}
+
+.carouselImageContainer {
+  position: relative;
+  width: 200px; /* Adjust to your desired frame size */
+  height: 200px;
+  overflow: hidden;
+}
+
+.pictureFrame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  height: 00%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ddd; /* Optional frame border */
+}
+
+.pictureFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.parap {
+  position: absolute;
+  width: 100px; /* Adjust size for inactive images */
+  height: 100px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+}
+
+.parap.active {
+  opacity: 1;
+  transform: scale(1.2); /* Slightly enlarge active image if needed */
+}
+
+.parap.left {
+  left: -150%; /* Position left image off-screen */
+}
+
+.parap.right {
+  left: 150%; /* Position right image off-screen */
+}
+
+
+
+
+/* 
+.arrow {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.circlesContainer {
+  display: flex;
+  gap: 5px;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.circle.active {
+  background-color: #000;
+}
+
+
+.brightness {
+  width: 30px;
+  height: 30px;
+} */

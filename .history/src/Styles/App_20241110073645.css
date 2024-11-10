@@ -1,0 +1,55 @@
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.circlesContainer {
+  display: flex;
+  gap: 5px;
+}
+
+.carouselImageContainer {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carouselActiveImage {
+  display: flex;
+  flex-shrink: 0;
+  transition: transform 0.5s ease; /* Smooth slide transition */
+}
+
+.pictureFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px; /* Adjust as needed */
+  height: 300px; /* Adjust as needed */
+  overflow: hidden;
+  position: relative;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+
+.circle.active {
+  background-color: #000; 
+
+}
+
+
+.brightness {
+  width: 30px;
+  height: 30px;
+}
