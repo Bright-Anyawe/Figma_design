@@ -1,5 +1,9 @@
-import { useContext } from "react";
+
+
+import { useContext, useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 import { ProvideContext } from "../../App";
+import "/src/Styles/appPresentation.css"
 
 export const AppPresentation = ({
   appPresentationTextColor,
@@ -7,12 +11,56 @@ export const AppPresentation = ({
   appInfoSliderColor,
 }) => {
   const { isBlack } = useContext(ProvideContext);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    // Observe the section
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    // Get all feature items
+    const featureItems = document.querySelectorAll('.feature-item');
+    featureItems.forEach((item, index) => {
+      // Add delay to each item based on index
+      item.style.transitionDelay = `${index * 0.1}s`;
+      observer.observe(item);
+    });
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+      
+      featureItems.forEach(item => {
+        observer.unobserve(item);
+    });
+    
+    AppPresentation.propTypes = {
+      appPresentationTextColor: PropTypes.object,
+      appPresentationHeaderText: PropTypes.object,
+      appInfoSliderColor: PropTypes.object,
+    };
+    };
+  }, []);
 
   return (
     <>
       <section
         className="appPresentationContainer"
         data-testid="appPresentation-contents"
+        ref={sectionRef}
       >
         <div className="appPresentation">
           <div
@@ -48,7 +96,7 @@ export const AppPresentation = ({
 
             <div className="appInfoSlider" ref={appInfoSliderColor}>
               <div className="accountLeftContents" ref={appInfoSliderColor}>
-                <div className="accountContainer">
+                <div className="accountContainer feature-item">
                   <div
                     className="accountTextContainer"
                     ref={appPresentationTextColor}
@@ -61,7 +109,7 @@ export const AppPresentation = ({
 
                   <img src="/UserAccount.png" alt="UserAccount" />
                 </div>
-                <div className="sendMoneyContainer">
+                <div className="sendMoneyContainer feature-item">
                   <div className="sendMoneyTextContainer">
                     <h4>Spend debt free</h4>
                     <p style={{ color: isBlack ? "#FFFFFF66" : "black" }}>
@@ -72,7 +120,7 @@ export const AppPresentation = ({
 
                   <img src="/Send money circle.png" alt="Send money circle" />
                 </div>
-                <div className="earnCashBackFill">
+                <div className="earnCashBackFill feature-item">
                   <div className="earnCashBackTextContainer">
                     <h4 className="mobileCashBackTitle">Earn cashback</h4>
                     <p style={{ color: isBlack ? "#FFFFFF66" : "black" }}>
@@ -89,7 +137,7 @@ export const AppPresentation = ({
                 className="accountRightContents"
                 style={{ color: isBlack ? "white" : "black" }}
               >
-                <div className="saveMoneyContainer">
+                <div className="saveMoneyContainer feature-item">
                   <img src="/Save money circle.png" alt="saveImage" />
 
                   <div className="saveMoneyTextContainer">
@@ -99,7 +147,7 @@ export const AppPresentation = ({
                     </p>
                   </div>
                 </div>
-                <div className="requestMoneyContainer">
+                <div className="requestMoneyContainer feature-item">
                   <img src="/Request circle.png" alt="requestImage" />
 
                   <div className="requestMoneyTextContainer">
@@ -110,7 +158,7 @@ export const AppPresentation = ({
                     </p>
                   </div>
                 </div>
-                <div className="qRCode">
+                <div className="qRCode feature-item">
                   <img src="/QR circle.png" alt="qRCodeImage" />
 
                   <div className="qRCodeTextContainer">
@@ -131,7 +179,7 @@ export const AppPresentation = ({
             style={{ color: isBlack ? "white" : "black" }}
           >
             <div className="accountLeftContents">
-              <div className="accountContainer">
+              <div className="accountContainer feature-item">
                 <div
                   className="accountTextContainer"
                   ref={appPresentationTextColor}
@@ -142,7 +190,7 @@ export const AppPresentation = ({
 
                 <img src="/UserAccount.png" alt="UserAccount" />
               </div>
-              <div className="sendMoneyContainer">
+              <div className="sendMoneyContainer feature-item">
                 <div className="sendMoneyTextContainer">
                   <h4>Spend debt free</h4>
                   <p>
@@ -153,7 +201,7 @@ export const AppPresentation = ({
 
                 <img src="/Send money circle.png" alt="Send money circle" />
               </div>
-              <div className="earnCashBackFill">
+              <div className="earnCashBackFill feature-item">
                 <div className="earnCashBackTextContainer">
                   <h4>Earn cashback</h4>
                   <p>
@@ -165,7 +213,7 @@ export const AppPresentation = ({
                 <img src="/Cashback Fill.png" alt="earnCashBackImage" />
               </div>
             </div>
-            <div className="iphoneContainer">
+            <div className="iphoneContainer phone-animate">
               <img className="desktopLeftVector" src="/Vector 1.png" alt="" />
               <img
                 className="iphoneImg"
@@ -176,7 +224,7 @@ export const AppPresentation = ({
             </div>
 
             <div className="accountRightContents">
-              <div className="saveMoneyContainer">
+              <div className="saveMoneyContainer feature-item">
                 <img src="/Save money circle.png" alt="saveImage" />
 
                 <div className="saveMoneyTextContainer">
@@ -184,7 +232,7 @@ export const AppPresentation = ({
                   <p>Open saving account,save money regularly.</p>
                 </div>
               </div>
-              <div className="requestMoneyContainer">
+              <div className="requestMoneyContainer feature-item">
                 <img src="/Request circle.png" alt="requestImage" />
 
                 <div className="requestMoneyTextContainer">
@@ -195,7 +243,7 @@ export const AppPresentation = ({
                   </p>
                 </div>
               </div>
-              <div className="qRCode">
+              <div className="qRCode feature-item">
                 <img src="/QR circle.png" alt="qRCodeImage" />
 
                 <div className="qRCodeTextContainer">

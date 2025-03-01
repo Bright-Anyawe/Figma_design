@@ -1,19 +1,9 @@
 import { useRef, useContext, useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import { ProvideContext } from "../../App";
 import "/src/Styles/Header.css"; 
 
 
-export const Header = ({
-  bodyRef,
-  heroScreenTxtRef,
-  cardText,
-  appPresentationTextColor,
-  appPresentationHeaderText,
-  cashBackHeadTitle,
-  cardsColor,
-  brandsTextTitleColor,
-}) => {
+export const Header = () => {
   const { isBlack, setIsBlack } = useContext(ProvideContext);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -172,16 +162,4 @@ export const Header = ({
       </div>
     </section>
   );
-};
-
-Header.propTypes = {
-  bodyRef: PropTypes.object,
-  heroScreenTxtRef: PropTypes.object,
-  cardText: PropTypes.object,
-  appPresentationTextColor: PropTypes.object,
-  appPresentationHeaderText: PropTypes.object,
-  cashBackHeadTitle: PropTypes.object,
-  cardsColor: PropTypes.object,
-  brandsTextTitleColor: PropTypes.object,
-  downloadTitleColor: PropTypes.object,
 };

@@ -1,0 +1,170 @@
+
+
+
+
+.appPresentation {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  
+  .appPresentationSubTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .appPresentationTitle {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    max-width: 560px;
+    max-height: 88px;
+    line-height: 44px;
+  }
+  
+  .appPresentationPara {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.32px;
+  }
+  
+  .appTextDesign {
+    color: #d760c7;
+  }
+  
+  .appPresentationContents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .accountLeftContents {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .accountLeftContents > * {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .accountLeftContents img,
+  .accountLeftContents img {
+    width: 68px;
+    height: 68px;
+  }
+  
+  .accountTextContainer,
+  .sendMoneyTextContainer,
+  .earnCashBackTextContainer {
+    width: 330px;
+    height: 76px;
+  }
+  
+  .cashBackHeadText {
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .accountTextContainer h4,
+  .sendMoneyTextContainer h4,
+  .earnCashBackTextContainer h4 {
+    width: 315px;
+    height: 26px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26.4px;
+    letter-spacing: -3%;
+  }
+  
+  .accountTextContainer p,
+  .sendMoneyTextContainer p,
+  .earnCashBackTextContainer p {
+    width: 330px;
+    height: 42px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.9px;
+    letter-spacing: -2%;
+  }
+  
+  .iphoneContainer {
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 352px;
+    height: 432px;
+    
+   
+  }
+  
+  
+  
+  .desktopLeftVector {
+      position: relative;
+      transform: translateY(-0%) rotate(20deg);
+      left: 35px;
+  }
+  
+  .desktopRightVector {
+        position: absolute;
+      transform: translateY(-05%) rotate(197deg);
+      left: -113px;
+  }
+  
+  
+  .iphoneImg {
+      position: absolute;
+      width: 246.7px;
+      height: 500px;
+      z-index: 999;
+  }
+  
+  .accountRightContents {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .accountRightContents > * {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .saveMoneyTextContainer {
+    width: 330px;
+    height: 50px;
+  }
+  .requestMoneyContainer {
+    width: 330px;
+    height: 50px;
+  }
+  
+  .qRCodeTextContainer {
+    width: 330px;
+    height: 106px;
+  }
+  
+  .saveMoneyTextContainer h4,
+  .requestMoneyContainer h4,
+  .qRCodeTextContainer h4 {
+    width: 315px;
+    height: 76;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26.4px;
+    letter-spacing: -3%;
+  }

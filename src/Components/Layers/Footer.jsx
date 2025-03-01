@@ -1,3 +1,5 @@
+// import "/src/Styles/Footer.css"
+
 export const Footer = () => {
   return (
     <>
@@ -27,7 +29,7 @@ export const Footer = () => {
                       <li>Ücretler ve Limitler</li>
                     </ul>
 
-                    {/* <div > */}
+                    {}
                     <ul className="otherDestek">
                       <li>Temsilcilikler</li>
                       <li>S.S.S.</li>
@@ -36,7 +38,7 @@ export const Footer = () => {
                       <li>Basın Medya Kiti</li>
                     </ul>
                   </div>
-                  {/* </div> */}
+                  {}
                 </div>
               </div>
             </div>

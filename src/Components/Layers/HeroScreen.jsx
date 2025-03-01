@@ -42,9 +42,9 @@ export const HeroScreen = ({ heroScreenTxtRef, handleClick }) => {
               Open an account
             </button>
           </div>
-          {/* <div className="heroImage"> */}
+          {}
           <img className="heroImage" src="/image.png" alt="" />
-          {/* </div> */}
+          {}
         </div>
       </section>
     </>
