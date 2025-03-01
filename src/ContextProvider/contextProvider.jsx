@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import PropTypes from "prop-types";
 
 export const HeroContext = createContext("");
 
@@ -17,6 +18,12 @@ const ParentContext = ({
       </HeroContext.Provider>
     </>
   );
+};
+ParentContext.propTypes = {
+  children: PropTypes.node.isRequired,
+  businessRef: PropTypes.object,
+  heroScreenTxt: PropTypes.string,
+  handleElementStyling: PropTypes.func,
 };
 
 export default ParentContext;

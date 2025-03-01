@@ -1,9 +1,8 @@
-// import { useContext } from "react";
-import { useRef } from "react";
+import { useRef, useContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { useContext } from "react";
 import { ProvideContext } from "../../App";
-// import HeroContext from "../../ContextProvider/contextProvider";
+import "/src/Styles/Header.css"; 
+
 
 export const Header = ({
   bodyRef,
@@ -15,184 +14,163 @@ export const Header = ({
   cardsColor,
   brandsTextTitleColor,
 }) => {
-  // const bodyRef = useRef(null);
-  const { isBlack, setIsBlack, appInfoSliderColor, downloadTitleColor } =
-    useContext(ProvideContext);
+  const { isBlack, setIsBlack } = useContext(ProvideContext);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const businessRef = useRef(null);
-  const langTextColor = useRef(null);
   const menuRef = useRef(null);
-  const logoRef = useRef(null);
-
-  //   const heroScreenTxtRef = useRef(null);
-
-  // const heroScreenTxt = useRef(null);
-  //   const {  businessRef, handleElementStyling } = useContext(HeroContext);
+  const headerRef = useRef(null);
 
   function handleElementStyling() {
     const setBackgroundBlack = !isBlack;
-    console.log(setBackgroundBlack);
     setIsBlack(setBackgroundBlack);
-    console.log(menuRef);
-
-    // if (setBackgroundBlack) {
-    //   bodyRef.current.classList.add("bodyRef");
-    //   logoRef.current.classList.add("logoRef");
-    //   businessRef.current.classList.add("businessRefColor");
-    //   langTextColor.current.classList.add("langTextColor");
-    //   heroScreenTxtRef.current.classList.add("heroScreenTxtRefColor");
-    //   cardText.current.classList.add("cardText");
-    //   appPresentationHeaderText.current.classList.add(
-    //     "appPresentationHeaderText"
-    //   );
-    //   appPresentationTextColor.current.classList.add(
-    //     "appPresentationTextColor"
-    //   );
-    //   cashBackHeadTitle.current.classList.add("cashBackHeadTitle");
-    //   cardsColor.current.classList.add("cardsColor");
-    //   brandsTextTitleColor.current.classList.add("brandsTextTitleColor");
-    //   downloadTitleColor.current.classList.add("downloadTitleColor");
-    //   menuRef.current.classList.add("menuRef");
-    //   appInfoSliderColor.current.classList.add("appInfoSliderColor");
-    // } else {
-    //   bodyRef.current.classList.remove("bodyRef");
-    //   logoRef.current.classList.remove("logoRef");
-    //   businessRef.current.classList.remove("businessRefColor");
-    //   langTextColor.current.classList.remove("langTextColor");
-    //   heroScreenTxtRef.current.classList.remove("heroScreenTxtRefColor");
-    //   cardText.current.classList.remove("cardText");
-    //   appPresentationHeaderText.current.classList.remove(
-    //     "appPresentationHeaderText"
-    //   );
-    //   appPresentationTextColor.current.classList.remove(
-    //     "appPresentationTextColor"
-    //   );
-    //   cashBackHeadTitle.current.classList.remove("cashBackHeadTitle");
-    //   cardsColor.current.classList.remove("cardsColor");
-    //   brandsTextTitleColor.current.classList.remove("brandsTextTitleColor");
-    //   downloadTitleColor.current.classList.remove("downloadTitleColor");
-    //   menuRef.current.classList.remove("menuRef");
-    // }
   }
 
-  // function handleVisibility() {}
+  function toggleMobileMenu() {
+    setMobileMenuOpen(!mobileMenuOpen);
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <>
-      <section
-        className="headerContentsContainer"
-        data-testid="header-contents"
-      >
-        <div className="headerContents">
-          <div className="headerRightContent">
-            <div className="Logo">
-              <img src="/Group 132.png" alt="logo" />
-              <h2 style={{ color: isBlack ? "white" : "black" }}>Parap</h2>
-            </div>
+    <section 
+      className={`header-contents-container ${scrolled ? "scrolled" : ""} ${isBlack ? "dark-mode" : "light-mode"}`} 
+      data-testid="header-contents"
+      ref={headerRef}
+    >
+      <div className="header-contents">
+        <div className="header-right-content">
+          <div className="logo">
+            <img src="/Group 132.png" alt="logo" className="logo-image" />
+            <h2 className="logo-text">Parap</h2>
+          </div>
 
-            <div className="groupContainer">
-              <div className="personalContainer">
-                <p>Personal</p>
-                <img src="/arrow-circle-down-stylish.png" alt="downArrow" />
-                {/* <p>svg</p> */}
+          <div className="group-container">
+            <div className="dropdown-container personal-container">
+              <p>Personal</p>
+              <img 
+                src={isBlack ? "/arrow-circle-down.png" : "/gray-arrow-down.png"} 
+                alt="downArrow" 
+                className="dropdown-arrow"
+              />
+              <div className="dropdown-content">
+                <a href="#">Personal Account</a>
+                <a href="#">Settings</a>
+                <a href="#">Preferences</a>
               </div>
-              <div
-                className="BusinessContainer"
-                style={{ color: isBlack ? "white" : "black" }}
-              >
-                <p ref={businessRef}>Business</p>
-                {isBlack ? (
-                  <img src="/arrow-circle-down.png" alt="downArrow" />
-                ) : (
-                  <img src="/gray-arrow-down.png" alt="downArrow" />
-                )}
+            </div>
+            <div className="dropdown-container business-container">
+              <p ref={businessRef}>Business</p>
+              <img 
+                src={isBlack ? "/arrow-circle-down.png" : "/gray-arrow-down.png"} 
+                alt="downArrow" 
+                className="dropdown-arrow"
+              />
+              <div className="dropdown-content">
+                <a href="#">Business Account</a>
+                <a href="#">Enterprise</a>
+                <a href="#">Solutions</a>
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="svgContainer mobileSvgBrightness">
+        <div className="mobile-controls">
+          <div className="svg-container mobile-svg-brightness">
             <svg
               onClick={handleElementStyling}
-              style={{ fill: isBlack ? "white" : "black" }}
-              className="brightness"
+              className="brightness-icon"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
-              <title></title>
+              <title>Toggle Theme</title>
               <path d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z" />
             </svg>
           </div>
 
-          <div className="menuContainer">
+          <div className="menu-container" ref={menuRef}>
             <svg
-              style={{ fill: isBlack ? "white" : "black" }}
-              className="menu"
+              onClick={toggleMobileMenu}
+              className="menu-icon"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
-              <title></title>
-              <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+              <title>Menu</title>
+              <path d={mobileMenuOpen ? "M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" : "M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"} />
             </svg>
           </div>
-          <div className="headerLeftContent">
-            <div className="buttonsContainer">
-              <button
-                className="loginBtn"
-                style={{
-                  color: isBlack && "white",
-                  backgroundColor: isBlack ? "inherit" : "white",
-                  borderColor: isBlack && "white",
-                  borderWidth: "1px",
-                  borderStyle: "solid",
-                }}
-              >
-                Log In
-              </button>
-              <button
-                className="signUpBtn"
-                style={{
-                  color: isBlack && "white",
-                  // backgroundColor: isBlack ? "inherit" : "white",
-                  borderColor: isBlack && "none",
-                  // borderWidth: "1px",
-                  // borderStyle: "solid",
-                }}
-              >
-                Sign In
-              </button>
+        </div>
+
+        <div className={`header-left-content ${mobileMenuOpen ? "mobile-menu-open" : ""}`}>
+          <div className="buttons-container">
+            <button className="login-btn">
+              Log In
+            </button>
+            <button className="signup-btn">
+              Sign In
+            </button>
+          </div>
+          <div className="language-dropdown">
+            <img src="/image 63.png" alt="countryLogo" className="country-logo" />
+            <div className="lang-text-container">
+              <p className="lang-text">
+                English
+              </p>
+              <img 
+                src={isBlack ? "/arrow-circle-down.png" : "/gray-arrow-down.png"} 
+                alt="downArrow" 
+                className="dropdown-arrow"
+              />
             </div>
-            <div className="Language">
-              <img src="/image 63.png" alt="countryLogo" />
-              <div className="langTextContainer">
-                <p
-                  className="langText"
-                  style={{ color: isBlack ? "white" : "black" }}
-                >
-                  English
-                </p>
-                {isBlack ? (
-                  <img src="/arrow-circle-down.png" alt="downArrow" />
-                ) : (
-                  <img src="/gray-arrow-down.png" alt="downArrow" />
-                )}
-              </div>
-            </div>
-            <div className="svgContainer desktopSvgBrightness">
-              <svg
-                onClick={handleElementStyling}
-                style={{ fill: isBlack ? "white" : "black" }}
-                className="brightness"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <title></title>
-                <path d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z" />
-              </svg>
+            <div className="dropdown-content language-options">
+              <a href="#">English</a>
+              <a href="#">Spanish</a>
+              <a href="#">French</a>
+              <a href="#">German</a>
             </div>
           </div>
+          <div className="svg-container desktop-svg-brightness">
+            <svg
+              onClick={handleElementStyling}
+              className="brightness-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <title>Toggle Theme</title>
+              <path d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z" />
+            </svg>
+          </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
